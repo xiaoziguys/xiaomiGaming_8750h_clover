@@ -1,0 +1,2 @@
+# xiaomiGaming_8750h_clover
+自用备份，小米游戏本8代i7黑苹果clover
