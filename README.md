@@ -6,6 +6,7 @@
 oc请自己unlock CFG（用ru.efi工具，偏移量0x3e）
 - OC目前不支持三指手势
 - 引导win把Misc-》Security改为0或者在entries里面加入win的引导路径
+- 如果要激活win，请用win的uuid
 
 # ru.efi
 1. 把ru文件夹里面的东西复制到一个fat格式的空u盘，开机f12选择这个启动项
