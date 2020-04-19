@@ -18,14 +18,6 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<false/>
-				<key>Path</key>
-				<string>SSDT-EC.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>XCPM</string>
 				<key>Enabled</key>
 				<true/>
@@ -79,22 +71,6 @@
 				<true/>
 				<key>Path</key>
 				<string>SSDT-FN.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-SMBUS.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-LPC.aml</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -403,6 +379,32 @@
 				<key>TableSignature</key>
 				<data></data>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>PNLF to XNLF</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>UE5MRg==</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data></data>
+				<key>OemTableId</key>
+				<data></data>
+				<key>Replace</key>
+				<data>WE5MRg==</data>
+				<key>ReplaceMask</key>
+				<data></data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data></data>
+			</dict>
 		</array>
 		<key>Quirks</key>
 		<dict>
@@ -462,7 +464,7 @@
 			<key>ProtectSecureBoot</key>
 			<true/>
 			<key>ProtectUefiServices</key>
-			<true/>
+			<false/>
 			<key>ProvideCustomSlide</key>
 			<true/>
 			<key>RebuildAppleMemoryMap</key>
@@ -491,7 +493,7 @@
 				<key>device-id</key>
 				<data>mz4ACQ==</data>
 				<key>device_type</key>
-				<data>AKwAAAAL7AAAAAA=</data>
+				<string>00AC0000 000BEC00 000000</string>
 				<key>framebuffer-con2-enable</key>
 				<data>AQAAAA==</data>
 				<key>framebuffer-con2-type</key>
@@ -505,9 +507,7 @@
 				<key>framebuffer-unifiedmem</key>
 				<data>AAAAgA==</data>
 				<key>hda-gfx</key>
-				<data>AAsKDQ==</data>
-				<key>disable-external</key>
-				<data>AQAAAA==</data>
+				<string>000B0A0D</string>
 			</dict>
 		</dict>
 		<key>Block</key>
@@ -991,7 +991,7 @@
 			<key>HibernateMode</key>
 			<string>Auto</string>
 			<key>HideAuxiliary</key>
-			<false/>
+			<true/>
 			<key>HideSelf</key>
 			<true/>
 			<key>PickerAttributes</key>
@@ -1034,9 +1034,9 @@
 				<key>Enabled</key>
 				<false/>
 				<key>Name</key>
-				<string>CustomOS</string>
+				<string>win</string>
 				<key>Path</key>
-				<string>PciRoot(0x0)/Pci(0x1,0x1)/Pci(0x0,0x0)/NVMe(0x1,11-22-33-44-55-66-77-88)/HD(1,GPT,00000000-0000-0000-0000-000000000000,0x800,0x64000)/\EFI\BOOT\BOOTX64.EFI</string>
+				<string>PciRoot(0x0)/Pci(0x1D,0x0)/Pci(0x0,0x0)/NVMe(0x1,9F-86-B5-81-85-38-25-00)/HD(1,GPT,3A5C66AD-43A7-491F-94C5-2A9428EEA3A9,0x800,0x82000)/\EFI\Microsoft\Boot\bootmgfw.efi</string>
 			</dict>
 		</array>
 		<key>Security</key>
@@ -1044,7 +1044,7 @@
 			<key>AllowNvramReset</key>
 			<true/>
 			<key>AllowSetDefault</key>
-			<false/>
+			<true/>
 			<key>AuthRestart</key>
 			<false/>
 			<key>ExposeSensitiveData</key>
@@ -1052,7 +1052,7 @@
 			<key>HaltLevel</key>
 			<integer>2147483648</integer>
 			<key>ScanPolicy</key>
-			<integer>0</integer>
+			<integer>524547</integer>
 			<key>Vault</key>
 			<string>Optional</string>
 		</dict>
@@ -1134,7 +1134,7 @@
 		<key>LegacySchema</key>
 		<dict/>
 		<key>WriteFlash</key>
-		<false/>
+		<true/>
 	</dict>
 	<key>PlatformInfo</key>
 	<dict>
@@ -1155,7 +1155,7 @@
 			<key>SystemSerialNumber</key>
 			<string>C02Y5DYAJHCC</string>
 			<key>SystemUUID</key>
-			<string>48C300BD-6EDA-48D8-924D-0F5CD9EC08DB</string>
+			<string>323136FD-31D4-4196-B3B7-5F3E128B9B8A</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
@@ -1192,6 +1192,7 @@
 			<string>ApfsDriverLoader-64.efi</string>
 			<string>OpenRuntime.efi</string>
 			<string>HFSPlus.efi</string>
+			<string>OpenUsbKbDxe.efi</string>
 		</array>
 		<key>Input</key>
 		<dict>
