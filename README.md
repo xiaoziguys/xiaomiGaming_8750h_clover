@@ -1,5 +1,5 @@
 # 介绍中文
-自用备份，只能在i7 8750h版本的小米游戏本上。我只试过10.15.4.其他的可能有问题.更新随缘，win10真香。除了wifi，独显都可以正常使用。oc的引导快捷键灵敏度不高，经常按不出来直接进系统。推荐打开系统选取界面，timeout设为1吧。
+自用备份，只能在i7 8750h版本的小米游戏本上。我只试过10.15.4.其他的可能有问题.更新随缘，win10真香。除了wifi，独显都可以正常使用。oc的引导快捷键灵敏度不高，经常按不出来直接进系统。推荐打开系统选取界面，timeout设为1吧。 Clover是QQ群别人的，我没有研究过，OC是自己弄的。
 
 # OC
 添加OC
@@ -87,7 +87,7 @@ Search "ssid" in kext->contents->info.plist then change "your_wifi_name" and "yo
 
 
 ## Thanks
-* EFI: 小思绪
+* Clover: 小思绪
 * intelWIFI:大佬因为违反开源协议git已经删除了。后期看zxystd大佬的驱动了
 the wifi driver repo was removed beacause the auther broke the GPLV2 protocol. I will update you with [another intel wifi driver project ](https://github.com/zxystd/itlwm), the author said he might implement airdrop and handoff when he has time.
 * IntelBlue:[https://github.com/zxystd/IntelBluetoothFirmware](https://github.com/zxystd/IntelBluetoothFirmware)
