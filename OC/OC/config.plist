@@ -94,6 +94,14 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
+				<string>SSDT-GPI0.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string></string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
 				<string>Mi-I2C.aml</string>
 			</dict>
 		</array>
@@ -516,6 +524,8 @@
 				<data>AAAAgA==</data>
 				<key>hda-gfx</key>
 				<string>000B0A0D</string>
+				<key>disable-external-gpu</key>
+				<data>AQAAAA==</data>
 			</dict>
 		</dict>
 		<key>Block</key>
@@ -1233,17 +1243,17 @@
 			<key>AdviseWindows</key>
 			<false/>
 			<key>MLB</key>
-			<string>C02904609GUJH4R1H</string>
+			<string>C02823101CDJH4RJA</string>
 			<key>ROM</key>
-			<data>bpgXlUJ5</data>
+			<data>0G0Hhfm1</data>
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SystemProductName</key>
 			<string>MacBookPro15,2</string>
 			<key>SystemSerialNumber</key>
-			<string>C02Y5DYAJHCC</string>
+			<string>C02WTEZKJHCC</string>
 			<key>SystemUUID</key>
-			<string>F983AEDA-C1A9-43CC-9BBF-6307B5BCBBB5</string>
+			<string>701CD3BF-BFAA-4BB7-A80F-9DCF0A85F9B5</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
