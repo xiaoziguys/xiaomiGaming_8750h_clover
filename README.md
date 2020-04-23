@@ -6,6 +6,7 @@
 oc请自己unlock CFG（用ru.efi工具，偏移量0x3e）
 - 如果要激活win，请用win的uuid
 - 我定制了自己的usb，左边第二个和后面那个被我改成内置设备，关闭了usb3.0功能，因为我固定用来插键盘和usb网卡
+- oc看两个网址就好了[使用OpenCore引导黑苹果 by XJN](https://blog.xjn819.com/?p=543)和[oc-little](https://github.com/daliansky/OC-little)
 
 # ru.efi
 1. 把ru文件夹里面的东西复制到一个fat格式的空u盘，开机f12选择这个启动项
@@ -90,5 +91,5 @@ Search "ssid" in kext->contents->info.plist then change "your_wifi_name" and "yo
 * Clover: 小思绪
 * intelWIFI:大佬因为违反开源协议git已经删除了。后期看zxystd大佬的驱动了
 the wifi driver repo was removed beacause the auther broke the GPLV2 protocol. I will update you with [another intel wifi driver project ](https://github.com/zxystd/itlwm), the author said he might implement airdrop and handoff when he has time.
-* IntelBlue:[https://github.com/zxystd/IntelBluetoothFirmware](https://github.com/zxystd/IntelBluetoothFirmware)
+* IntelBlue:[https://github.com/zxystd/IntelBluetoothFirmware](https://github.com/zxystd/IntelBluetoothFirmware) 
 
