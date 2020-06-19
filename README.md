@@ -2,11 +2,13 @@
 自用备份，只能在i7 8750h版本的小米游戏本上。我只试过10.15.4.其他的可能有问题.更新随缘，win10真香。除了wifi，独显都可以正常使用。oc的引导快捷键灵敏度不高，经常按不出来直接进系统。推荐打开系统选取界面，timeout设为1吧。 Clover是QQ群别人的，我没有研究过，OC是自己弄的。
 
 # OC 0.5.9
-添加OC
 oc请自己unlock CFG（用ru.efi工具，偏移量0x3e）
 - 如果要激活win，请用win的uuid
 - 我定制了自己的usb，左边第二个和后面那个被我改成内置设备，关闭了usb3.0功能，因为我固定用来插键盘和usb网卡
 - oc看两个网址就好了[使用OpenCore引导黑苹果 by XJN](https://blog.xjn819.com/?p=543)和[oc-little](https://github.com/daliansky/OC-little)
+
+# Clover
+clover的声卡ID十进制是99，十六进制63000000
 
 # ru.efi
 1. 把ru文件夹里面的东西复制到一个fat格式的空u盘，开机f12选择这个启动项
@@ -15,76 +17,14 @@ oc请自己unlock CFG（用ru.efi工具，偏移量0x3e）
 4. 按回车键修改为00，Alt+Q保持退出
 5. 在找到Sasetup重复上面的步骤
 
-# drivers
-* intelwifi可用，但是目前不稳定。推荐开机手动加载。可以加入用户登录项。要改sh和kext里面的一些东西
-这个作者已经因为违反开源协议github被删了。接下来关注zxystd大佬的intel wifi驱动，大佬说后期可能会实现airdrop
-* 要用wifi驱动先关闭sip
-
-* 改"PathToYourDriver"为你放驱动的路径  "yourLoginPWD" 你的开机密码
-* 如果你不知道怎么加登录项和默认终端运行sh。可以直接开机后拖sh到终端图标上也可以
-```
-#!/bin/bash
-cd PathToYourDriver
-sudo -S rm -rf /tmp/*.kext << EOF
-yourLoginPWD
-EOF
-sudo cp -r *.kext /tmp
-sudo chown -R root:wheel /tmp/*.kext
-sudo kextutil /tmp/*.kext
-
-```
-
-搜索 "ssid" 在 kext->contents->info.plist 然后改 "your_wifi_name" 为你的wifi名字 and "your_wifi_pwd" 你的wifi密码
-
-
-***在kext上右键显示包含内容就可以找到info.plist***
-```
-<dict>
-	<key>BSSID</key>
-	<string>YOUR_WIFI_NAME</string>
-	<key>BSSID - 2</key>
-	<string>KIMAX</string>
-	<key>PWD</key>
-	<string>YOUR_WIFI_PWD</string>
-</dict>
-```
 
 # Introduction
 This is my Clover backup. I am not responsible for the ISSUE you might have. This is only for i7 8750H version of xiaomi Gaming laptop with Catalina.
 
 
 # drivers
-* Intel wifi works, but you need to load it everytime reboot, Or you can add the sh to your Login Items. Don't forget change the path in sh and the SSID in Kext->content->info.plist. no airdrop, handoff support yet.
-* AppleALC: don't update this driver, otherwise you need to inject ID by yourself
+* AppleALC: don't update this driver, otherwise you need to inject ID by yourself,HEX ID is 63000000。Decimal ID is 99
 * Disable sip before using the wifi driver
-
-Change "PathToYourDriver" and "yourLoginPWD" in run.sh. if you don't know how to add it to login items Just easily drag it onto terminal work as well
-```
-#!/bin/bash
-cd PathToYourDriver
-sudo -S rm -rf /tmp/*.kext << EOF
-yourLoginPWD
-EOF
-sudo cp -r *.kext /tmp
-sudo chown -R root:wheel /tmp/*.kext
-sudo kextutil /tmp/*.kext
-
-```
-
-Search "ssid" in kext->contents->info.plist then change "your_wifi_name" and "your_wifi_pwd"
-
-
-***right click on kext then choose show contents  to open contents***
-```
-<dict>
-	<key>BSSID</key>
-	<string>YOUR_WIFI_NAME</string>
-	<key>BSSID - 2</key>
-	<string>KIMAX</string>
-	<key>PWD</key>
-	<string>YOUR_WIFI_PWD</string>
-</dict>
-```
 
 
 ## Thanks
