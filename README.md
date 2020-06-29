@@ -9,6 +9,9 @@ oc请自己unlock CFG（用ru.efi工具，偏移量0x3e），~~如果不解锁�
 # Clover
 clover的声卡ID十进制是99，十六进制63000000
 
+#CFGLock.efi
+[远景分享的外国CFGLock工具](http://bbs.pcbeta.com/viewthread-1860726-1-1.html)，我没试过。不过这个比ru.efi简单可以试试。放在oc的工具里面，选择系统界面按空格可以调出。
+
 # ru.efi
 1. 把ru文件夹里面的东西复制到一个fat格式的空u盘，开机f12选择这个启动项
 2. alt+=进入列表
