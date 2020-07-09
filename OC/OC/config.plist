@@ -419,7 +419,7 @@
 			<key>FadtEnableReset</key>
 			<false/>
 			<key>NormalizeHeaders</key>
-			<false/>
+			<true/>
 			<key>RebaseRegions</key>
 			<false/>
 			<key>ResetHwSig</key>
@@ -1117,22 +1117,7 @@
 			<integer>3</integer>
 		</dict>
 		<key>Entries</key>
-		<array>
-			<dict>
-				<key>Arguments</key>
-				<string></string>
-				<key>Auxiliary</key>
-				<false/>
-				<key>Comment</key>
-				<string>Not signed for security reasons</string>
-				<key>Enabled</key>
-				<false/>
-				<key>Name</key>
-				<string>win</string>
-				<key>Path</key>
-				<string>PciRoot(0x0)/Pci(0x1D,0x0)/Pci(0x0,0x0)/NVMe(0x1,9F-86-B5-81-85-38-25-00)/HD(1,GPT,3A5C66AD-43A7-491F-94C5-2A9428EEA3A9,0x800,0x82000)/\EFI\Microsoft\Boot\bootmgfw.efi</string>
-			</dict>
-		</array>
+		<array/>
 		<key>Security</key>
 		<dict>
 			<key>AllowNvramReset</key>
