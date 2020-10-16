@@ -1,8 +1,8 @@
 # 介绍中文
-自用备份，只能在i7 8750h版本的小米游戏本上。我只试过10.15.4\10.15.5.其他的可能有问题.更新随缘，win10真香。除了wifi，独显都可以正常使用。oc的引导快捷键灵敏度不高，经常按不出来直接进系统。推荐打开系统选取界面，timeout设为1吧。 Clover是QQ群别人的，我没有研究过，OC是自己弄的。**用的这个efi的请自己先生成一个新的序列号。不要大家用一个，有封号的风险。**
+自用备份，只能在i7 8750h版本的小米游戏本上。clover支持10.15，ocwifi驱动是big sur用的，catalina要自己去下载对应的驱动。win10真香。wifi支持handoff，不支持airdrop。**用的这个efi的请自己先生成一个新的序列号。不要大家用一个，有封号的风险。**
 
 # wifi
-集成了[wifi驱动](https://github.com/OpenIntelWireless/itlwm/releases)wifi客户端自行下载[下载地址](https://github.com/OpenIntelWireless/HeliPort/releases)
+用OC装10.15的自己下载对应的ctalina的airportItlwm。
 
 # OC 0.6.0
 oc请自己unlock CFG（用ru.efi工具，偏移量0x3e），~~如果不解锁可以打开Kernel-Quirks里面的AppleCpuPmCfgLock和AppleXcpmCfgLock（我默认打开了，为了有些人不想解锁，如果你解锁了可以关了）~~（这是4代前cup才需要勾AppleCpuPmCfgLock）。如果不解锁可以打开Kernel-Quirks里面的AppleXcpmCfgLoc推荐解锁，不解锁好像不能用原生NVRAM和改DVMT大小。OC自带的解锁shell工具不适用小米游戏本- 如果要激活win，请用win的uuid
